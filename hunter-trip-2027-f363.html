@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackie Hunter — Walt Disney World 2027 | Point Me to Paradise Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --cream: #faf8f3;
+    --warm: #f5f0e8;
+    --gold: #c9952a;
+    --gold-light: #e8c96a;
+    --teal: #1d6a72;
+    --teal-light: #2a9aa6;
+    --rust: #c0522a;
+    --muted: #6b6b7a;
+    --border: #e2ddd4;
+    --white: #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--ink);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  .site-header .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .site-header .tagline {
+    font-size: 0.75rem;
+    color: #8888aa;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .advisor-pill {
+    font-size: 0.75rem;
+    color: var(--cream);
+    background: rgba(201,149,42,0.18);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    padding: 5px 14px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0f2744 0%, #1d3a5c 40%, #1d6a72 100%);
+    padding: 80px 40px 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .hero h1 em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+  .hero-sub {
+    color: #b0c8d8;
+    font-size: 1.05rem;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .meta-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 0.82rem;
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .meta-chip .icon { font-size: 1rem; }
+
+  /* ── PMTP COMMITMENT BANNER ── */
+  .commitment-banner {
+    background: var(--teal);
+    color: var(--white);
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+  .commitment-banner strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--ink);
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  /* ── RUNNING TOTAL BAR ── */
+  .total-bar {
+    background: var(--ink);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 40px 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .total-bar .label {
+    font-size: 0.78rem;
+    color: #8888aa;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .total-bar .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .total-bar .breakdown {
+    font-size: 0.82rem;
+    color: #9090aa;
+    margin-top: 4px;
+  }
+  .price-promise {
+    background: rgba(201,149,42,0.12);
+    border: 1px solid rgba(201,149,42,0.3);
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+    color: var(--gold-light);
+    max-width: 340px;
+    line-height: 1.5;
+  }
+  .price-disclaimer {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+    padding: 0 4px;
+  }
+
+  /* ── LINE ITEMS ── */
+  .line-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 20px 0;
+  }
+  .line-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+  .line-item:last-child { border-bottom: none; }
+  .line-item .li-label { color: var(--muted); }
+  .line-item .li-value { font-weight: 500; color: var(--ink); }
+  .line-item.total-line {
+    font-weight: 600;
+    font-size: 1rem;
+    border-top: 2px solid var(--border);
+    border-bottom: none;
+    padding-top: 14px;
+    margin-top: 6px;
+  }
+  .line-item.total-line .li-value { color: var(--gold); font-size: 1.1rem; }
+
+  /* ── CARD BASE ── */
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+
+  /* ── FLIGHT CARD ── */
+  .flight-header {
+    background: linear-gradient(135deg, #1a2744 0%, #1d4d72 100%);
+    padding: 24px 28px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .flight-airline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .flight-cabin {
+    font-size: 0.78rem;
+    color: var(--gold-light);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .flight-price-badge {
+    background: var(--gold);
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .flight-price-badge .price { font-size: 1.4rem; font-family: 'Playfair Display', serif; }
+  .flight-price-badge .pp { font-size: 0.72rem; margin-top: 1px; }
+
+  .flight-legs {
+    padding: 24px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 580px) { .flight-legs { grid-template-columns: 1fr; } }
+
+  .flight-leg {
+    background: var(--warm);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .leg-direction {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .leg-times {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .leg-time { font-size: 1.4rem; font-family: 'Playfair Display', serif; color: var(--ink); }
+  .leg-arrow { color: var(--gold); font-size: 1rem; }
+  .leg-date { font-size: 0.8rem; color: var(--muted); }
+
+  .flight-perks {
+    padding: 0 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .perk-tag {
+    background: #eef7f8;
+    border: 1px solid #cce5e8;
+    color: var(--teal);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+  }
+
+  /* ── HOTEL CARD ── */
+  .hotel-hero-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+  }
+  .hotel-body { padding: 28px; }
+  .hotel-category-tag {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .hotel-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .hotel-location {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hotel-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #3a3a4a;
+    margin-bottom: 24px;
+  }
+
+  /* ── PHOTO STRIP ── */
+  .photo-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 28px;
+  }
+  .photo-strip img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+  @media (max-width: 500px) { .photo-strip { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ── INCLUDED BOX ── */
+  .included-box {
+    background: #eef7f8;
+    border: 1px solid #cce5e8;
+    border-left: 4px solid var(--teal);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+  }
+  .included-box h4 {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .included-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .included-list li {
+    font-size: 0.88rem;
+    color: #2a4a50;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    line-height: 1.5;
+  }
+  .included-list li::before {
+    content: '✓';
+    color: var(--teal);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .included-list li.sub-item {
+    padding-left: 20px;
+    color: #3a6068;
+  }
+  .included-list li.sub-item::before { content: '·'; color: var(--teal-light); }
+
+  /* ── ROOM OPTION CARDS ── */
+  .room-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+  @media (max-width: 600px) { .room-grid { grid-template-columns: 1fr; } }
+
+  .room-card {
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .room-card:hover { border-color: var(--teal); }
+  .room-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+  .room-card-body { padding: 16px 18px; }
+  .room-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .room-card-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .room-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .room-spec {
+    background: var(--warm);
+    border-radius: 4px;
+    padding: 3px 9px;
+    font-size: 0.75rem;
+    color: var(--ink);
+  }
+
+  /* ── ADD-ON ── */
+  .addon-card {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--warm);
+  }
+  .addon-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .addon-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+  .addon-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--rust);
+    white-space: nowrap;
+  }
+  .addon-note { font-size: 0.75rem; color: var(--muted); }
+
+  /* ── WHAT'S NEXT ── */
+  .whats-next {
+    background: linear-gradient(135deg, var(--ink) 0%, #1d3a5c 100%);
+    border-radius: 12px;
+    padding: 36px 32px;
+    margin: 40px 0;
+    color: var(--white);
+  }
+  .whats-next h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+  .whats-next p {
+    font-size: 0.95rem;
+    color: #b0c8d8;
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* ── CONTACT FORM ── */
+  .contact-section { margin-top: 48px; }
+  .contact-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .contact-section p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field.full { grid-column: 1 / -1; }
+  .form-field label {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .form-field input,
+  .form-field textarea {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+  }
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(29,106,114,0.12);
+  }
+  .form-field textarea { min-height: 120px; resize: vertical; }
+
+  .submit-btn {
+    margin-top: 20px;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .submit-btn:hover { background: #165860; }
+  .submit-btn:active { transform: scale(0.98); }
+
+  .form-success {
+    display: none;
+    background: #eef7f8;
+    border: 1.5px solid var(--teal);
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    color: var(--teal);
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  .form-success.visible { display: block; }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--ink);
+    color: #6666aa;
+    padding: 28px 40px;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.7;
+    border-top: 1px solid #2a2a40;
+  }
+  .site-footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 40px 0;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up {
+    animation: fadeUp 0.55s ease both;
+  }
+  .fade-up:nth-child(2) { animation-delay: 0.1s; }
+  .fade-up:nth-child(3) { animation-delay: 0.2s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .site-header { padding: 14px 20px; }
+    .hero { padding: 50px 20px 44px; }
+    .main { padding: 0 16px 60px; }
+    .hotel-body { padding: 20px; }
+    .total-bar { padding: 20px; }
+    .total-bar .amount { font-size: 2rem; }
+    .flight-legs { padding: 18px; }
+    .flight-perks { padding: 0 18px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div>
+    <div class="brand">Point Me to Paradise Travel</div>
+    <div class="tagline">Custom Travel · Real Humans</div>
+  </div>
+  <div class="advisor-pill">Shirley Hilton, Advisor</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow fade-up">Travel Quote · Prepared for Jackie Hunter</div>
+    <h1 class="fade-up">Walt Disney World,<br><em>July 2027</em></h1>
+    <p class="hero-sub fade-up">3 Adults + 1 Child · 6 Nights · Package with Dining & Memory Maker</p>
+    <div class="hero-meta fade-up">
+      <div class="meta-chip"><span class="icon">📅</span> July 4 – 10, 2027</div>
+      <div class="meta-chip"><span class="icon">👨‍👩‍👧</span> 4 Travelers</div>
+      <div class="meta-chip"><span class="icon">🏨</span> All-Star Resort · Preferred Room</div>
+      <div class="meta-chip"><span class="icon">✈️</span> Southwest Economy Choice</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENT BANNER -->
+<div class="commitment-banner">
+  <strong>We don't book hotels. We build trips.</strong>
+  Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- ════════════════════════════════
+       SECTION 1 — FLIGHTS
+  ════════════════════════════════ -->
+  <div style="margin-top: 48px;">
+    <div class="section-label">Step One</div>
+    <div class="section-title" style="font-size:1.4rem; margin-bottom:16px;">Your Flights</div>
+  </div>
+
+  <div class="card">
+    <div class="flight-header">
+      <div>
+        <div class="flight-airline">Southwest Airlines</div>
+        <div class="flight-cabin">Economy Choice · 4 Passengers</div>
+      </div>
+      <div class="flight-price-badge">
+        <div class="price">$2,233</div>
+        <div class="pp">est. total · all 4 travelers</div>
+      </div>
+    </div>
+
+    <div class="flight-legs">
+      <div class="flight-leg">
+        <div class="leg-direction">✈ Outbound · July 4</div>
+        <div class="leg-times">
+          <span class="leg-time">10:20a</span>
+          <span class="leg-arrow">→</span>
+          <span class="leg-time">1:50p</span>
+        </div>
+        <div class="leg-date">Departs July 4, 2027</div>
+      </div>
+      <div class="flight-leg">
+        <div class="leg-direction">✈ Return · July 10</div>
+        <div class="leg-times">
+          <span class="leg-time">4:40p</span>
+          <span class="leg-arrow">→</span>
+          <span class="leg-time">6:15p</span>
+        </div>
+        <div class="leg-date">Departs July 10, 2027</div>
+      </div>
+    </div>
+
+    <div style="padding: 0 28px 0; margin-bottom: 4px;">
+      <div style="background: #fff8ec; border: 1px solid #e8c96a; border-radius: 6px; padding: 10px 16px; font-size: 0.82rem; color: #7a5a10; display: flex; align-items: center; gap: 8px;">
+        <span>⚠</span> <span><strong>Estimated pricing:</strong> July 2027 Southwest fares have not yet been released. The $2,233 figure is based on current comparable-date pricing and will be confirmed once 2027 schedules open.</span>
+      </div>
+    </div>
+    <div class="flight-perks">
+      <span class="perk-tag">1 Carry-on included</span>
+      <span class="perk-tag">1 Personal item included</span>
+      <span class="perk-tag">Seat choice at booking</span>
+      <span class="perk-tag">12-month transferable flight credit</span>
+      <span class="perk-tag">Free same-day change &amp; standby</span>
+      <span class="perk-tag">General boarding</span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       SECTION 2 — HOTEL
+  ════════════════════════════════ -->
+  <div class="divider"></div>
+  <div class="section-label">Step Two</div>
+  <div class="section-title">Your Resort</div>
+
+  <div class="card">
+    <img
+      class="hotel-hero-img"
+      src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbndEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--101a102956f41f11ef9bfd3db8b6075d77a56e20/orl236_overview_atmosphere.jpg"
+      alt="Disney's All-Star Resorts exterior"
+      onerror="this.style.display='none'"
+    >
+
+    <div class="hotel-body">
+      <div class="hotel-category-tag">Value Resort · Walt Disney World</div>
+      <div class="hotel-title">Disney's All-Star Resorts<br><span style="font-size:1rem; color:var(--muted); font-style:italic;">Sports, Music, or Movies — Preferred Room</span></div>
+      <div class="hotel-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Animal Kingdom Resort Area, Walt Disney World, Orlando FL
+      </div>
+
+      <div class="hotel-desc">
+        The All-Star Resorts sit at the southern end of Disney property, about a five-minute bus ride from Animal Kingdom and fifteen from Magic Kingdom. What you get here is exactly what makes the difference for a trip like this: a fully immersive Disney environment without the price tag of the deluxe tier. The buildings are color-saturated and outsized — at All-Star Music you walk past 40-foot saxophones; at Movies, giant Dalmatians flank the stairwells; at Sports, massive football helmets anchor the courtyards. None of it is subtle, and that's the point.<br><br>
+        The Preferred room you're booked into is in the section closest to Melody Hall (or its equivalent at whichever All-Star Disney assigns you) — that means the shortest walk to the food court, the bus stop, the main pool, and check-in. On a week in July, that proximity matters. The standard rooms run 260 square feet with a fold-down Murphy-style second bed that doubles as a table and two chairs when not deployed — genuinely useful engineering in a small space. The main bed is a queen; the fold-down is also queen-width. Four people fit comfortably, and the bathroom is split into three zones (sink, toilet, shower) so mornings don't become a bottleneck.
+      </div>
+
+      <!-- Photo strip -->
+      <div class="photo-strip">
+        <img src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcGNEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9b05fa8839fcad5aeaaaceaaac29e7557dce6ce8/orl236_pool_overview_10.jpg" alt="Calypso Pool" onerror="this.style.display='none'">
+        <img src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--67136cd5599b225159f77e3648c8b23217c5c477/orl236_std_bedroom_10.jpg" alt="Standard room" onerror="this.style.display='none'">
+        <img src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjBEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--94d62117489521011b32b435e9d4b2f9e4c2511c/orl236_overview_lobby.jpg" alt="Lobby" onerror="this.style.display='none'">
+      </div>
+
+      <!-- What's Included -->
+      <div class="included-box">
+        <h4>What's Included in Your Package</h4>
+        <ul class="included-list">
+          <li><strong>6 Nights — Preferred Room</strong>, All-Star Resort (Sports, Music, or Movies). Views of courtyard, pool, or parking area. Close to main lobby, food court, and bus stop.</li>
+          <li><strong>7-Day Theme Park Tickets — Park Hopper</strong> for all 4 travelers. Valid for entry to Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom. Park Hopper allows you to visit more than one park on the same day — start at one, hop to another after noon. 7 days of tickets gives you flexibility to take rest days or return to favorites without losing access.</li>
+          <li><strong>Disney Dining Plan</strong> — per person, per night of stay:
+            <ul style="list-style:none; margin-top:8px; display:flex; flex-direction:column; gap:6px;">
+              <li class="sub-item">1 Table Service meal (sit-down restaurant dining)</li>
+              <li class="sub-item">1 Quick Service meal (counter-service: burgers, pizza, sandwiches, etc.)</li>
+              <li class="sub-item">1 Snack or non-alcoholic drink — or 1 alcoholic drink for guests 21+ (beer, wine, cocktail); snack options include ice cream, popcorn, piece of fruit, cup of soup</li>
+              <li class="sub-item">1 Resort-Refillable Drink Mug — unlimited soft drink refills at your resort food court only (not valid in theme parks)</li>
+            </ul>
+          </li>
+          <li><strong>Memory Maker ($185 value)</strong> — Disney PhotoPass's all-inclusive photo package. Every photo and video captured by Disney photographers at attractions, character meet-and-greets, and around the parks is downloadable for your group. No paying per photo.</li>
+          <li><strong>Travel Protection Plan ($297)</strong> — trip protection coverage for the package.</li>
+          <li><strong>4 Miniature Golf Vouchers</strong> — one round of 18-hole mini golf per person.</li>
+          <li><strong>4 ESPN Wide World of Sports Vouchers</strong> — general admission for one day per guest to the ESPN Wide World of Sports Complex.</li>
+          <li><strong>Package Discounts</strong> — various resort, dining, and recreation discounts included.</li>
+          <li><strong>Free Bus Transportation</strong> — service to all four theme parks, both water parks, and Disney Springs. Buses typically run every 20 minutes from the resort stop.</li>
+          <li><strong>Early Theme Park Entry</strong> — as an on-site Disney resort guest, your party enters any theme park 30 minutes before general public opening.</li>
+          <li><strong>MagicBand / App Room Key Access</strong> — use the My Disney Experience app on your phone as your room key, park ticket, and charge card.</li>
+        </ul>
+      </div>
+
+      <!-- NOT included -->
+      <div style="background: #fff8f5; border: 1px solid #f0d0c0; border-left: 4px solid var(--rust); border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
+        <h4 style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--rust); font-weight:600; margin-bottom:10px;">Not Included — Good to Know</h4>
+        <ul class="included-list" style="color: #5a3020;">
+          <li>Lightning Lane passes (formerly Genie+) — purchased separately in the My Disney Experience app, starting at $15–$30/person/day depending on season. Popular for skipping standby lines on rides like Tron, Guardians, and Frozen Ever After.</li>
+          <li>Airport transfers — quoted separately below once flights are confirmed.</li>
+          <li>Alcoholic beverages beyond the included dining plan snack/drink credit.</li>
+          <li>Gratuities at table-service restaurants (standard 18–20%).</li>
+          <li>Souvenirs, Mickey bars, and any retail purchases.</li>
+        </ul>
+      </div>
+
+      <!-- Room Options -->
+      <h4 style="font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal); font-weight:600; margin-bottom:14px;">Your Room — Preferred Category</h4>
+      <div class="room-grid">
+        <div class="room-card">
+          <img src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb2dEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--116674d8f3f5c5c5b6c23ec7d14a599da142b38a/orl236_std_bedroom_40.jpg" alt="Preferred Room queen bed" onerror="this.style.display='none'">
+          <div class="room-card-body">
+            <div class="room-card-title">Preferred Room — 1 Queen + Table Bed</div>
+            <div class="room-card-desc">260 sq ft. The fold-down Murphy bed converts from a table-and-two-chairs to a full queen. Modern hardwood-look floors, built-in storage nooks, split bathroom (3 zones). Sleeps up to 4 adults.</div>
+            <div class="room-specs">
+              <span class="room-spec">260 sq ft</span>
+              <span class="room-spec">Sleeps 4</span>
+              <span class="room-spec">Near lobby &amp; bus</span>
+              <span class="room-spec">Courtyard/pool view</span>
+            </div>
+          </div>
+        </div>
+        <div class="room-card">
+          <img src="https://storage-cdn.touringplans.com/storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VEIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--67136cd5599b225159f77e3648c8b23217c5c477/orl236_std_bedroom_10.jpg" alt="Room layout" onerror="this.style.display='none'">
+          <div class="room-card-body">
+            <div class="room-card-title">Room Amenities</div>
+            <div class="room-card-desc">Flat-panel TV, Wi-Fi, digital thermostat, in-room safe, iron &amp; board, hair dryer, individual coffee maker, USB charging ports at each nightstand. Shampoo, conditioner, body wash.</div>
+            <div class="room-specs">
+              <span class="room-spec">Free Wi-Fi</span>
+              <span class="room-spec">Coffee maker</span>
+              <span class="room-spec">USB ports</span>
+              <span class="room-spec">In-room safe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resort Amenities -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px;">
+        <div style="padding: 16px; background: var(--warm); border-radius: 8px;">
+          <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); font-weight:600; margin-bottom:8px;">Pools</div>
+          <div style="font-size:0.85rem; color:#3a3a4a; line-height:1.6;">Two pools on property. The Calypso Pool is guitar-shaped with a Donald Duck fountain and an adjacent kiddie wading pool. The Piano Pool is a secondary option, also large. Pool bar on-site. Movies Under the Stars (Sun–Fri nights) at the main pool.</div>
+        </div>
+        <div style="padding: 16px; background: var(--warm); border-radius: 8px;">
+          <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); font-weight:600; margin-bottom:8px;">Dining &amp; Shopping</div>
+          <div style="font-size:0.85rem; color:#3a3a4a; line-height:1.6;">Intermission Food Court (All-Star Music) offers multiple stations: specialty coffee, roast chicken, burgers, pizza, pasta, grab-and-go. Singing Spirits Pool Bar. Maestro Mickey's gift shop with Disney merchandise and resort essentials.</div>
+        </div>
+        <div style="padding: 16px; background: var(--warm); border-radius: 8px;">
+          <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); font-weight:600; margin-bottom:8px;">Recreation</div>
+          <div style="font-size:0.85rem; color:#3a3a4a; line-height:1.6;">Note'able Games Arcade, playground (near Jazz Inn section), jogging trail, campfire activities at the Calypso Pool. Laundry facilities on-site.</div>
+        </div>
+        <div style="padding: 16px; background: var(--warm); border-radius: 8px;">
+          <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--teal); font-weight:600; margin-bottom:8px;">Transport</div>
+          <div style="font-size:0.85rem; color:#3a3a4a; line-height:1.6;">Free bus service to Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom, Typhoon Lagoon, Blizzard Beach, and Disney Springs. Runs approximately every 20 minutes. Bus stop at Melody Hall.</div>
+        </div>
+      </div>
+
+    </div><!-- /hotel-body -->
+  </div><!-- /card -->
+
+  <!-- ════════════════════════════════
+       ADD-ON
+  ════════════════════════════════ -->
+  <div class="section-label">Optional Add-On</div>
+  <div class="addon-card">
+    <div>
+      <h4>Airport Transfers (Round-Trip)</h4>
+      <p>Private round-trip ground transportation between Orlando International Airport (MCO) and your Disney resort. To be confirmed and priced once flights are booked — estimated cost based on current rates.</p>
+    </div>
+    <div style="text-align:right;">
+      <div class="addon-price">~$200</div>
+      <div class="addon-note">est. · all 4 travelers<br>Added after flight booking</div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════
+       RUNNING TOTAL
+  ════════════════════════════════ -->
+  <div class="divider"></div>
+  <div class="section-label">Investment</div>
+
+  <div class="card" style="padding: 28px;">
+    <div class="line-items">
+      <div class="line-item">
+        <span class="li-label">Southwest Flights — est. (4 travelers, 2027 dates not yet released)</span>
+        <span class="li-value">~$2,233.00</span>
+      </div>
+      <div class="line-item">
+        <span class="li-label">7-Day Park Hopper Tickets (4 travelers)</span>
+        <span class="li-value">Included in package</span>
+      </div>
+      <div class="line-item">
+        <span class="li-label">All-Star Resort Package — 6 nights, Preferred Room (incl. dining plan, Memory Maker, protection, vouchers)</span>
+        <span class="li-value">TBD — advisor to confirm</span>
+      </div>
+      <div class="line-item">
+        <span class="li-label">Airport Transfers (optional, est.)</span>
+        <span class="li-value">~$200.00</span>
+      </div>
+      <div class="line-item total-line">
+        <span>Estimated Trip Total</span>
+        <span class="li-value">$2,433+ (flights &amp; transfers) · resort TBD</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="total-bar">
+    <div>
+      <div class="label">Est. Flights + Optional Transfer</div>
+      <div class="amount">$2,433<span style="font-size:1.2rem; color:#7090a0;">+</span></div>
+      <div class="breakdown">Flight pricing estimated — 2027 fares not yet released · Resort package TBD · 4 travelers</div>
+    </div>
+    <div class="price-promise">
+      We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+    </div>
+  </div>
+  <div class="price-disclaimer">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+
+  <!-- ════════════════════════════════
+       WHAT'S NEXT
+  ════════════════════════════════ -->
+  <div class="whats-next">
+    <h3>What's coming after this quote</h3>
+    <p>A destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+  </div>
+
+  <!-- ════════════════════════════════
+       CONTACT FORM
+  ════════════════════════════════ -->
+  <div class="contact-section">
+    <div class="section-label">Ready to Move Forward?</div>
+    <h3>Let's Talk</h3>
+    <p>Questions, adjustments, or ready to book — reach out below and Shirley will be back with you quickly.</p>
+
+    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="2c19d37d-d74e-4204-9871-a4197bb2dc2f">
+      <input type="hidden" name="subject" value="New quote response from Jackie Hunter — Walt Disney World 2027">
+      <input type="hidden" name="redirect" value="">
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="name">Full Name <span style="color:var(--rust);">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address <span style="color:var(--rust);">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(xxx) xxx-xxxx">
+        </div>
+        <div class="form-field full">
+          <label for="message">Questions or Notes</label>
+          <textarea id="message" name="message" placeholder="Any questions about the quote, changes you'd like, or just ready to get started..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Send to Shirley →</button>
+    </form>
+
+    <div class="form-success" id="formSuccess">
+      <strong style="font-size:1.2rem; display:block; margin-bottom:6px;">✓ Message sent!</strong>
+      Shirley will be in touch shortly. Keep an eye on your inbox.
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div style="margin-bottom:6px;">
+    <strong style="color: var(--gold);">Shirley Hilton</strong> · Point Me to Paradise Travel
+  </div>
+  <div>
+    <a href="mailto:Shirley.ParadisePlanner@gmail.com">Shirley.ParadisePlanner@gmail.com</a>
+    &nbsp;·&nbsp;
+    <a href="tel:4093924946">(409) 392-4946</a>
+  </div>
+  <div style="margin-top: 10px; font-size:0.72rem; color:#444466;">
+    Quote prepared by Shirley Hilton · Point Me to Paradise Travel · Pricing subject to change until fully booked.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.submit-btn');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const result = await response.json();
+      if (result.success) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
